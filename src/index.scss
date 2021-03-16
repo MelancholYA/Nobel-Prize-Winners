@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+$DarkBrown: #bc6c25;
+$LightBrown: #dda15e;
+$WhiteBrown: #fefae0;
+$DarkGreen: #21222d;
+$LightGreen: #606c38;
+body {
+  font-family: "timeburner", sans-serif;
+  overflow-x: hidden;
+  background: $DarkGreen;
+  letter-spacing: 1px;
+}
+.title {
+  background: #f7c389;
+  font-size: xx-large;
+  text-align: center;
+  font-weight: 900;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  color: #272623;
+  box-shadow: 0 4px 14px #000000;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .side {
+    max-width: 40%;
+    min-width: 270px;
+    .categories {
+      margin: 10px 20px;
+      background: #3f3f50;
+      border-radius: 5px;
+      box-shadow: 0 0 14px #403b3e;
+      overflow: hidden;
+
+      position: sticky;
+      top: 0;
+      h2 {
+        padding: 10px;
+        background: #7b799a;
+        color: aliceblue;
+      }
+      ul {
+        li {
+          margin: 10px;
+          list-style: inside;
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+    .years {
+      position: sticky;
+      top: 0;
+      button {
+        all: unset;
+        background: linear-gradient(178deg, #7b799a, transparent);
+        padding: 10px;
+        color: white;
+        width: 100%;
+        text-align: center;
+      }
+      ul {
+        text-align: center;
+        padding: 15px;
+        li {
+          display: inline-block;
+          list-style: none;
+          background: wheat;
+          cursor: pointer;
+          padding: 5px 15px;
+          width: 85px;
+          border-radius: 100vw;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .body {
+    width: auto;
+    background: #3c3c4a;
+    margin: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 14px #ffffff61;
+    color: white;
+    overflow: hidden;
+    h1 {
+      padding: 10px;
+      border-bottom: 2px solid white;
+      background: #f7c389;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 15px;
+      flex-wrap: wrap;
+      li {
+        max-width: 270px;
+        margin: 10px;
+        flex-shrink: 0;
+        background: #242244;
+
+        border-radius: 5px;
+        overflow: hidden;
+        h2 {
+          text-align: center;
+          padding: 10px;
+          background: #7b799a;
+        }
+        h3 {
+          padding: 10px;
+          border-bottom: 2px solid;
+          width: fit-content;
+        }
+        ul {
+          display: block;
+          li {
+            list-style: inside;
+          }
+        }
+        p {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+.category {
+  background: #454554;
+  button {
+    all: unset;
+    background: linear-gradient(178deg, #7b799a, transparent);
+    padding: 10px;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+  .holder {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+
+    color: wheat;
+    flex-wrap: wrap;
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30%;
+      text-align: center;
+      margin: 10px;
+      padding: 15px;
+      border: 1px solid;
+      min-height: 330px;
+      ul {
+        all: unset;
+        background: #6a6b7b;
+        padding: 10px;
+        display: block;
+        text-align: left;
+        color: white;
+        li {
+          all: unset;
+          margin: 5px 0;
+          display: block;
+          padding: 5px 0;
+        }
+      }
+      h4 {
+        margin: 10px;
+        border: 1px solid;
+        padding: 10px 5px;
+        background: #f7c3894f;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+    .side {
+      .years {
+        ul {
+          li {
+            width: auto;
+          }
+        }
+      }
+    }
+    .body {
+      ul {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .category .holder li {
+    width: 100%;
+    flex-shrink: 0;
+  }
+}
